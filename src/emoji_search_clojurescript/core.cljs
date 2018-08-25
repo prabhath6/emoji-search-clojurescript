@@ -6,7 +6,15 @@
 ;; Views
 
 (defn home-page []
-  [:div [:h2 "Welcome to Reagent"]])
+  [:section.hero
+   [:div.hero-body
+    [:div.container.has-text-centered
+     [:h1.title "🙂 Emoji Search 🔢"]
+     [:div.content
+      [:table
+       [:tbody
+        (for [i [1 2 3 4]]
+          [:tr [:td i]])]]]]]])
 
 ;; -------------------------
 ;; Initialize app
