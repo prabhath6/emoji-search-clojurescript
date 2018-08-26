@@ -9210,3 +9210,4 @@
   }
 ]))
 
+(def filtered-emojis (r/atom (take 25 @emojis)))
