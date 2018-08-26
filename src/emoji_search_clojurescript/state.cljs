@@ -1,6 +1,7 @@
 (ns emoji-search-clojurescript.state
   (:require [reagent.core :as r]))
 
+(def search-term (r/atom nil))
 
 (def emojis (r/atom
 [

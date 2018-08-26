@@ -18,14 +18,22 @@
                [:img {:src (str "//cdn.jsdelivr.net/emojione/assets/png/" (.toString (.codePointAt (get emoji :symbol) 0) 16) ".png")}]]]
               [:div.column (get emoji :title)]]]])]]])
 
+(defn search-handler []
+  [:input.input.is-medium.is-success
+   {
+    :type "text"
+    :placeholder "Search Emoji"
+    :on-change (fn [e]
+                 (let [term-value (reset! st/search-term (.. e -target -value))]
+                   (prn term-value)))}])
+
 (defn home-page []
   [:section.hero
    [:div.hero-body
     [:div.container.has-text-centered
      [:h1.title "🙂 Emoji Search 🔢"] ;; should be a new component, and the two emojis should change randomly
-     [:input.input.is-medium.is-success {:type "text" :placeholder "Search Emoji"}] ;; should be a new component
-     [:div.content
-      [display-emojis]]]]])
+     [search-handler]
+     [display-emojis]]]])
 
 ;; -------------------------
 ;; Initialize app
