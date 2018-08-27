@@ -1,13 +1,12 @@
 (ns emoji-search-clojurescript.search-handler
   (:require [emoji-search-clojurescript.state :as st]))
 
-(defn keyword-search-helper [filter-term emoji]
-  (if (not (or (= filter-term "") (= filter-term " ")))
-    (.includes (.toLowerCase (get emoji :keywords)) filter-term)))
+(defn search-helper [filter-term emoji param]
+  (.includes (.toLowerCase (get emoji param)) filter-term))
 
 (defn search-title-and-keywords [filter-term emoji]
-  (let [keyword-results (keyword-search-helper filter-term emoji)
-        title-results (.includes (.toLowerCase (get emoji :title)) filter-term)]
+  (let [keyword-results (search-helper filter-term emoji :keywords)
+        title-results (search-helper filter-term emoji :title)]
     (if title-results
       title-results
       keyword-results)))
