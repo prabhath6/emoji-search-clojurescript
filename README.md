@@ -19,5 +19,6 @@ lein package
 ```
 
 ### App Sample Screenshots
+Clicking on any emoji will copy it on to clipboard.
 ![Default Page](https://github.com/prabhath6/emoji-search-clojurescript/blob/master/sample-images/initial.png "Initial Image")
 ![After Searching](https://github.com/prabhath6/emoji-search-clojurescript/blob/master/sample-images/search.png "Search Results")
