@@ -4,7 +4,8 @@
      [emoji-search-clojurescript.display-emojis :as d]
      [emoji-search-clojurescript.search-handler :as sh]
      [emoji-search-clojurescript.state :as st]
-     [emoji-search-clojurescript.title-component :as tc]))
+     [emoji-search-clojurescript.title-component :as tc]
+     [emoji-search-clojurescript.made-with-bulma :as mb]))
 
 ;; -------------------------
 ;; Views
@@ -15,7 +16,8 @@
     [:div.container.has-text-centered
      [tc/title-component]
      [sh/search-handler]
-     [d/display-emojis]]]])
+     [d/display-emojis]
+     [mb/made-with-bulma]]]])
 
 ;; -------------------------
 ;; Initialize app
