@@ -18,7 +18,6 @@ lein clean
 lein package
 ```
 
-### Sample Images
-![Alt text](/emoji-search-clojurescript/sample-images/initial.png "Initial Image")
-
-![Alt text](/emoji-search-clojurescript/sample-images/search.png "Search Results")
+### App Sample Screenshots
+![Default Page](https://github.com/prabhath6/emoji-search-clojurescript/blob/master/sample-images/initial.png "Initial Image")
+![After Searching](https://github.com/prabhath6/emoji-search-clojurescript/blob/master/sample-images/search.png "Search Results")
